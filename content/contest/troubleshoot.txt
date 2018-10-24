@@ -1,52 +1,51 @@
-Pre-submit:
-Write a few simple test cases, if sample is not enough.
-Are time limits close? If so, generate max cases.
-Is the memory usage fine?
-Could anything overflow?
-Make sure to submit the right file.
+提交前：
+如果样例不够，自己写几个简单的测试用例。
+时间限制很短吗？如果是的话试试最大规模数据。
+内存使用正常吗？
+会有哪里出现溢出吗？
+确保提交正确的题目、正确的文件。
 
 Wrong answer:
-Print your solution! Print debug output, as well.
-Are you clearing all datastructures between test cases?
-Can your algorithm handle the whole range of input?
-Read the full problem statement again.
-Do you handle all corner cases correctly?
-Have you understood the problem correctly?
-Any uninitialized variables?
-Any overflows?
-Confusing N and M, i and j, etc.?
-Are you sure your algorithm works?
-What special cases have you not thought of?
-Are you sure the STL functions you use work as you think?
-Add some assertions, maybe resubmit.
-Create some testcases to run your algorithm on.
-Go through the algorithm for a simple case.
-Go through this list again.
-Explain your algorithm to a team mate.
-Ask the team mate to look at your code.
-Go for a small walk, e.g. to the toilet.
-Is your output format correct? (including whitespace)
-Rewrite your solution from the start or let a team mate do it.
+打印你的答案和debug输出！
+多个测试点之间清空数据结构了吗？
+初始化了吗？
+溢出了吗？
+你的算法处理了所有的输入的范围了吗？
+正确处理边界条件了吗？
+重新读题。
+你真的读懂题目了吗？
+N、M或者i、j等等没看清楚？
+你确定算法对吗？
+和一个队友解释你的算法。
+什么特殊情况没考虑到？
+输出格式对了吗？
+多搞点测试用例跑跑看。
+你确定STL函数的用法和功能和你想的一样？
+加点断言，最差情况重新提交。
+在简单情况下彻底运行你的程序。
+从最上面开始重新读一遍。
+放松一下大脑，比如去上厕所。
+推了重做，或者让队友来做。
 
 Runtime error:
-Have you tested all corner cases locally?
-Any uninitialized variables?
-Are you reading or writing outside the range of any vector?
-Any assertions that might fail?
-Any possible division by 0? (mod 0 for example)
-Any possible infinite recursion?
-Invalidated pointers or iterators?
-Are you using too much memory?
-Debug with resubmits (e.g. remapped signals, see Various).
+边界条件都测过了吗？
+有没有没初始化的变量？
+有没有哪个数组越界读写了？
+有没有哪个断言为假？
+有没有哪里除0或者mod 0了？
+有没有哪里死循环了？
+有没有哪里有无效的指针或者迭代器？
+内存是不是用太多了？
+最差情况：通过提交来找到问题。（见Various一节）
 
 Time limit exceeded:
-Do you have any possible infinite loops?
-What is the complexity of your algorithm?
-Are you copying a lot of unnecessary data? (References)
-How big is the input and output? (consider scanf)
-Avoid vector, map. (use arrays/unordered_map)
-What do your team mates think about your algorithm?
+有没有死循环？
+算法的复杂度是什么？
+有没有哪里复制了大量的数据？（用引用了吗？）
+输入输出的量多大？（用scanf了吗？）
+注意vector和map（用数组和unordered_map代替）
+你队友觉得你的算法怎么样？
 
 Memory limit exceeded:
-What is the max amount of memory your algorithm should need?
-Are you clearing all datastructures between test cases?
+你需要的最大内存是多少？
+不同测试点之间清空数据了吗？

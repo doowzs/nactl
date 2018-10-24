@@ -146,7 +146,7 @@ def processwithcomments(caption, instream, outstream, listingslang = None):
         if includelist:
             out.append(r"\leftcaption{%s}" % pathescape(", ".join(includelist)))
         if nsource:
-            out.append(r"\rightcaption{%d lines}" % len(nsource.split("\n")))
+            out.append(r"\rightcaption{共计 %d 行}" % len(nsource.split("\n")))
         langstr = ", language="+listingslang if listingslang else ""
         out.append(r"\begin{lstlisting}[caption={%s}%s]" % (pathescape(caption), langstr))
         out.append(nsource)
@@ -159,7 +159,7 @@ def processraw(caption, instream, outstream, listingslang = 'raw'):
     try:
         source = instream.read().strip()
         addref(caption, outstream)
-        print(r"\rightcaption{%d lines}" % len(source.split("\n")), file=outstream)
+        print(r"\rightcaption{共计 %d 行}" % len(source.split("\n")), file=outstream)
         print(r"\begin{lstlisting}[language=%s,caption={%s}]" % (listingslang, pathescape(caption)), file=outstream)
         print(source, file=outstream)
         print(r"\end{lstlisting}", file=outstream)
