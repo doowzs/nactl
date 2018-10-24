@@ -1,0 +1,31 @@
+\documentclass[10pt, a4paper, notitlepage]{report}
+\usepackage{nactlpkg}
+\nactlcontentdir{../content}
+
+\university{NJU}{Nanjing University}{nju}
+\team{NJU99 (TBC)}{Tianyun Zhang, Zangwei Zheng, Chen Xu}
+\contest{ACM-ICPC}{Oct 24, 2018}
+
+\begin{document}
+	\maketeampage
+	% Small nactl header on the first page:
+	% \maketitle{``One Last Time'' Edition}{\today}
+	\begin{multicols*}{3}
+	\setcounter{tocdepth}{0}
+	\thispagestyle{fancy}
+	\nactlchapter{contest}
+	\nactlchapter{math}
+	\nactlchapter{data-structures}
+	\nactlchapter{numerical}
+	\nactlchapter{number-theory}
+	\nactlchapter{combinatorial}
+	\nactlchapter{graph}
+	\nactlchapter{geometry}
+	\nactlchapter{strings}
+	\nactlchapter{various}
+	\end{multicols*}
+
+	\begin{multicols*}{3}
+	\nactlchapter{appendix}
+	\end{multicols*}
+\end{document}
