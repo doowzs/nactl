@@ -1,76 +1,87 @@
 % Written by Anders Sjoqvist and Ulf Lundstrom, 2009
 % The main sources are: tinyKACTL, Beta and Wikipedia
 
-\chapter{Mathematics}
+\chapter{昏睡数学}
 
-\section{Equations}
+\section{等式}
+二元一次方程
 \[ax^2+bx+c=0 \Rightarrow x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}\]
 
-The extremum is given by $x = -b/2a$.
+最大值的横坐标为 $x = -b/2a$.
 
+二元一次方程组
 \[\begin{aligned}ax+by=e\\cx+dy=f\end{aligned}
 \Rightarrow
 \begin{aligned}x=\dfrac{ed-bf}{ad-bc}\\y=\dfrac{af-ec}{ad-bc}\end{aligned}\]
 
-In general, given an equation $Ax = b$, the solution to a variable $x_i$ is given by
+通常情况下，对于方程组 $Ax = b$， $x_i$ 的解是
 \[x_i = \frac{\det A_i'}{\det A} \]
-where $A_i'$ is $A$ with the $i$'th column replaced by $b$.
+其中 $A_i'$ 是将 $A$ 的第 $i$ 列用 $b$ 替换得到的矩阵。
 
 \section{Recurrences}
 If $a_n = c_1 a_{n-1} + \dots + c_k a_{n-k}$, and $r_1, \dots, r_k$ are distinct roots of $x^k + c_1 x^{k-1} + \dots + c_k$, there are $d_1, \dots, d_k$ s.t.
 \[a_n = d_1r_1^n + \dots + d_kr_k^n. \]
 Non-distinct roots $r$ become polynomial factors, e.g. $a_n = (d_1n + d_2)r^n$.
 
-\section{Trigonometry}
+\section{三角函数}
+基础公式：
 \begin{align*}
 \sin(v+w)&{}=\sin v\cos w+\cos v\sin w\\
-cos(v+w)&{}=\cos v\cos w-\sin v\sin w\\
+cos(v+w)&{}=\cos v\cos w-\sin v\sin w
 \end{align*}
+忘了叫什么的公式：
 \begin{align*}
 \tan(v+w)&{}=\dfrac{\tan v+\tan w}{1-\tan v\tan w}\\
 \sin v+\sin w&{}=2\sin\dfrac{v+w}{2}\cos\dfrac{v-w}{2}\\
 \cos v+\cos w&{}=2\cos\dfrac{v+w}{2}\cos\dfrac{v-w}{2}
 \end{align*}
 \[ (V+W)\tan(v-w)/2{}=(V-W)\tan(v+w)/2 \]
-where $V, W$ are lengths of sides opposite angles $v, w$.
+其中 $V, W$ 是角 $v, w$ 的对边。
 \begin{align*}
 	a\cos x+b\sin x&=r\cos(x-\phi)\\
 	a\sin x+b\cos x&=r\sin(x+\phi)
 \end{align*}
-where $r=\sqrt{a^2+b^2}, \phi=\operatorname{atan2}(b,a)$.
+其中 $r=\sqrt{a^2+b^2}, \phi=\operatorname{atan2}(b,a)$.
 
-\section{Geometry}
+\section{几何}
 
-\subsection{Triangles}
-Side lengths: $a,b,c$\\
-Semiperimeter: $p=\dfrac{a+b+c}{2}$\\
-Area: $A=\sqrt{p(p-a)(p-b)(p-c)}$\\
-Circumradius: $R=\dfrac{abc}{4A}$\\
-Inradius: $r=\dfrac{A}{p}$\\
-Length of median (divides triangle into two equal-area triangles): $m_a=\tfrac{1}{2}\sqrt{2b^2+2c^2-a^2}$\\
-Length of bisector (divides angles in two): $s_a=\sqrt{bc\left[1-\left(\dfrac{a}{b+c}\right)^2\right]}$\\
-Law of sines: $\dfrac{\sin\alpha}{a}=\dfrac{\sin\beta}{b}=\dfrac{\sin\gamma}{c}=\dfrac{1}{2R}$\\
-Law of cosines: $a^2=b^2+c^2-2bc\cos\alpha$\\
-Law of tangents: $\dfrac{a+b}{a-b}=\dfrac{\tan\dfrac{\alpha+\beta}{2}}{\tan\dfrac{\alpha-\beta}{2}}$\\
+\subsection{三角形}
+边长： $a,b,c$
 
-\subsection{Quadrilaterals}
-With side lengths $a,b,c,d$, diagonals $e, f$, diagonals angle $\theta$, area $A$ and
-magic flux $F=b^2+d^2-a^2-c^2$:
+半周长： $p=\dfrac{a+b+c}{2}$
 
+面积： $A=\sqrt{p(p-a)(p-b)(p-c)}$
+
+外切圆半径： $R=\dfrac{abc}{4A}$
+
+内切圆半径： $r=\dfrac{A}{p}$
+
+中线长： $m_a=\tfrac{1}{2}\sqrt{2b^2+2c^2-a^2}$
+
+角平分线长： $s_a=\sqrt{bc\left[1-\left(\dfrac{a}{b+c}\right)^2\right]}$
+
+正弦定律： $\dfrac{\sin\alpha}{a}=\dfrac{\sin\beta}{b}=\dfrac{\sin\gamma}{c}=\dfrac{1}{2R}$
+
+余弦定律： $a^2=b^2+c^2-2bc\cos\alpha$
+
+正切定律： $\dfrac{a+b}{a-b}=\dfrac{\tan\dfrac{\alpha+\beta}{2}}{\tan\dfrac{\alpha-\beta}{2}}$
+
+\subsection{四边形}
+边长分别为$a,b,c,d$、对角线长度$e, f$，一个角大小$\theta$，面积$A$， magic flux $F=b^2+d^2-a^2-c^2$:
 \[ 4A = 2ef \cdot \sin\theta = F\tan\theta = \sqrt{4e^2f^2-F^2} \]
+对于圆的内切四边形，对角的和是$180^\circ$，并且有
+$ef = ac + bd$且$A = \sqrt{(p-a)(p-b)(p-c)(p-d)}$。 \vspace{3mm}
 
- For cyclic quadrilaterals the sum of opposite angles is $180^\circ$,
-$ef = ac + bd$, and $A = \sqrt{(p-a)(p-b)(p-c)(p-d)}$.
-
-\subsection{Spherical coordinates}
-\centerline{\includegraphics[width=25mm]{../content/math/sphericalCoordinates}}
+\subsection{球坐标}
+球坐标与直角坐标的转换关系：
 \[\begin{array}{cc}
 x = r\sin\theta\cos\phi & r = \sqrt{x^2+y^2+z^2}\\
 y = r\sin\theta\sin\phi & \theta = \textrm{acos}(z/\sqrt{x^2+y^2+z^2})\\
 z = r\cos\theta & \phi = \textrm{atan2}(y,x)
 \end{array}\]
 
-\section{Derivatives/Integrals}
+\section{微积分}
+常见求导、积分公式：
 \begin{align*}
 	\dfrac{d}{dx}\arcsin x = \dfrac{1}{\sqrt{1-x^2}} &&& \dfrac{d}{dx}\arccos x = -\dfrac{1}{\sqrt{1-x^2}} \\
 	\dfrac{d}{dx}\tan x = 1+\tan^2 x &&& \dfrac{d}{dx}\arctan x = \dfrac{1}{1+x^2} \\
@@ -78,10 +89,11 @@ z = r\cos\theta & \phi = \textrm{atan2}(y,x)
 	\int e^{-x^2} = \frac{\sqrt \pi}{2} \text{erf}(x) &&& \int xe^{ax}dx = \frac{e^{ax}}{a^2}(ax-1)
 \end{align*}
 
-Integration by parts:
+分部积分：
 \[\int_a^bf(x)g(x)dx = [F(x)g(x)]_a^b-\int_a^bF(x)g'(x)dx\]
 
-\section{Sums}
+\section{数列求和}
+等比数列求和：
 \[ c^a + c^{a+1} + \dots + c^{b} = \frac{c^{b+1} - c^a}{c-1}, c \neq 1 \]
 \begin{align*}
 	1 + 2 + 3 + \dots + n &= \frac{n(n+1)}{2} \\
@@ -90,27 +102,28 @@ Integration by parts:
 	1^4 + 2^4 + 3^4 + \dots + n^4 &= \frac{n(n+1)(2n+1)(3n^2 + 3n - 1)}{30} \\
 \end{align*}
 
-\section{Series} 
+\section{级数} 
+常见级数展开：
 $$e^x = 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\dots,\,(-\infty<x<\infty)$$
 $$\ln(1+x) = x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\dots,\,(-1<x\leq1)$$
 $$\sqrt{1+x} = 1+\frac{x}{2}-\frac{x^2}{8}+\frac{2x^3}{32}-\frac{5x^4}{128}+\dots,\,(-1\leq x\leq1)$$
 $$\sin x = x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\dots,\,(-\infty<x<\infty)$$
 $$\cos x = 1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\dots,\,(-\infty<x<\infty)$$
 
-\section{Probability theory}
+\section{概率论}
 Let $X$ be a discrete random variable with probability $p_X(x)$ of assuming the value $x$. It will then have an expected value (mean) $\mu=\mathbb{E}(X)=\sum_xxp_X(x)$ and variance $\sigma^2=V(X)=\mathbb{E}(X^2)-(\mathbb{E}(X))^2=\sum_x(x-\mathbb{E}(X))^2p_X(x)$ where $\sigma$ is the standard deviation. If $X$ is instead continuous it will have a probability density function $f_X(x)$ and the sums above will instead be integrals with $p_X(x)$ replaced by $f_X(x)$.
 
-Expectation is linear:
+期望是线性的：
 \[\mathbb{E}(aX+bY) = a\mathbb{E}(X)+b\mathbb{E}(Y)\]
 For independent $X$ and $Y$, \[V(aX+bY) = a^2V(X)+b^2V(Y).\]
 
-\subsection{Discrete distributions}
+\subsection{离散分布}
 
-\subsubsection{Binomial distribution}
-The number of successes in $n$ independent yes/no experiments, each which yields success with probability $p$ is $\textrm{Bin}(n,p),\,n=1,2,\dots,\, 0\leq p\leq1$.
+\subsubsection{二项分布}
+$n$次随机独立Y/N事件中成功事件的数量, each which yields success with probability $p$ is $\textrm{Bin}(n,p),\,n=1,2,\dots,\, 0\leq p\leq1$.
 \[p(k)=\binom{n}{k}p^k(1-p)^{n-k}\]
 \[\mu = np,\,\sigma^2=np(1-p)\]
-$\textrm{Bin}(n,p)$ is approximately $\textrm{Po}(np)$ for small $p$.
+当$p$非常小时，$\textrm{Bin}(n,p)$ 接近于 $\textrm{Po}(np)$。
 
 \subsubsection{First success distribution}
 The number of trials needed to get the first success in independent yes/no experiments, each wich yields success with probability $p$ is $\textrm{Fs}(p),\,0\leq p\leq1$.
@@ -122,9 +135,9 @@ The number of events occurring in a fixed period of time $t$ if these events occ
 \[p(k)=e^{-\lambda}\frac{\lambda^k}{k!}, k=0,1,2,\dots\]
 \[\mu=\lambda,\,\sigma^2=\lambda\]
 
-\subsection{Continuous distributions}
+\subsection{连续分布}
 
-\subsubsection{Uniform distribution}
+\subsubsection{均匀分布}
 If the probability density function is constant between $a$ and $b$ and 0 elsewhere it is $\textrm{U}(a,b),\,a<b$.
 \[f(x) = \left\{
 \begin{array}{cl}
@@ -133,7 +146,7 @@ If the probability density function is constant between $a$ and $b$ and 0 elsewh
 \end{array}\right.\]
 \[\mu=\frac{a+b}{2},\,\sigma^2=\frac{(b-a)^2}{12}\]
 
-\subsubsection{Exponential distribution}
+\subsubsection{指数分布}
 The time between events in a Poisson process is $\textrm{Exp}(\lambda),\,\lambda>0$.
 \[f(x) = \left\{
 \begin{array}{cl}
@@ -142,13 +155,13 @@ The time between events in a Poisson process is $\textrm{Exp}(\lambda),\,\lambda
 \end{array}\right.\]
 \[\mu=\frac{1}{\lambda},\,\sigma^2=\frac{1}{\lambda^2}\]
 
-\subsubsection{Normal distribution}
+\subsubsection{正态分布}
 Most real random values with mean $\mu$ and variance $\sigma^2$ are well described by $\mathcal{N}(\mu,\sigma^2),\,\sigma>0$.
 \[ f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}} \]
 If $X_1 \sim \mathcal{N}(\mu_1,\sigma_1^2)$ and $X_2 \sim \mathcal{N}(\mu_2,\sigma_2^2)$ then
 \[ aX_1 + bX_2 + c \sim \mathcal{N}(\mu_1+\mu_2+c,a^2\sigma_1^2+b^2\sigma_2^2) \]
 
-\section{Markov chains}
+\section{马尔可夫链}
 A \emph{Markov chain} is a discrete random process with the property that the next state depends only on the current state.
 Let $X_1,X_2,\ldots$ be a sequence of random variables generated by the Markov process.
 Then there is a transition matrix $\mathbf{P} = (p_{ij})$, with $p_{ij} = \Pr(X_n = i | X_{n-1} = j)$,

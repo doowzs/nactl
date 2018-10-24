@@ -12,4 +12,10 @@ typedef vector<int> vi;
 int main() {
 	cin.sync_with_stdio(0); cin.tie(0);
 	cin.exceptions(cin.failbit);
+	int T = 0;
+	cin >> T;
+	while (T--) {
+		
+	}
+	return 0;
 }
