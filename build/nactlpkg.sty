@@ -4,7 +4,16 @@
 % Modified by Tianyun Zhang, 2018-10-24
 \ProvidesPackage{nactlpkg}
 
-\usepackage[utf8]{inputenc}             % Encoding UTF-8
+\usepackage{xltxtra,fontspec,xunicode}
+\setCJKmainfont{WenQuanYi Zen Hei}
+%\setCJKmonofont{Hei}
+
+%\setmainfont{Optima}
+%\setmonofont{Monaco}
+%\setsansfont{Trebuchet MS}
+
+\usepackage{ctex}
+%\usepackage[utf8]{inputenc}            % Encoding UTF-8 not needed in xelatex environment
 \usepackage{listings}                   % Source code listings
 \usepackage{framed}                     % Source code listings
 \usepackage[a4paper,landscape,hmargin={0.5cm,0.5cm},vmargin={1.0cm,0.4cm}]{geometry}
@@ -21,7 +30,6 @@
 \usepackage[inline]{enumitem}           % For horizontal lists
 \usepackage[parfill]{parskip}           % For compact enumerations
 \usepackage[dvipsnames]{xcolor}
-\usepackage[normalem]{ulem}
 
 % Config commands
 \newcommand{\subtitle}[1]{
@@ -158,7 +166,7 @@
     \string^%
   \endgroup
 }
-\renewcommand*{\tilde}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
+\newcommand{\xetilde}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
 
 % Configure source code listings
 \lstset{language=C++}
@@ -170,7 +178,7 @@
 \lstset{basicstyle=\scriptsize\ttfamily}
 \lstset{commentstyle=\normalfont\itshape}
 \lstset{literate={^}{\caret}{1}}
-\lstset{literate={~}{\tilde}{1}}
+\lstset{literate={~}{\xetilde}{1}}
 \lstset{emptylines=*1}
 \lstset{inputencoding=utf8}
 \lstset{aboveskip=3pt}
@@ -182,7 +190,7 @@
 \setlength{\columnsep}{10pt} % Multicol separation margin
 \setcounter{tocdepth}{1} % Table of contents depth
 
-\pdfsuppresswarningpagegroup=1
+%\pdfsuppresswarningpagegroup=1
 
 \newcommand{\maketeampage}{
 	\pagestyle{empty}

@@ -3,7 +3,7 @@
  * Date: 2018-07-23
  * License: CC0
  * Source: http://codeforces.com/blog/entry/60737
- * Description: Hash map with the same API as unordered\_map, but \tilde 3x faster.
+ * Description: Hash map with the same API as unordered\_map, but \xetilde 3x faster.
  * Initial capacity must be a power of 2 (if provided).
  */
 #pragma once
