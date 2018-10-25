@@ -3,8 +3,7 @@
  * Date: 2016-03-22
  * License: CC0
  * Source: hacKIT, NWERC 2015
- * Description: A set (not multiset!) with support for finding the n'th
- * element, and finding the index of an element.
+ * Description: 顺序统计树是一种二叉搜索树的变种，支持查询第$k$小的元素和某个元素$x$的排名。
  * Time: O(\log N)
  */
 #pragma once
