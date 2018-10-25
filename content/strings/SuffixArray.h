@@ -4,12 +4,8 @@
  * License: CC0
  * Source: folklore and Linear-time longest-common-prefix
  * computation in suffix arrays and its applications (2001).
- * Description: Builds suffix array for a string. $a[i]$ is
- * the starting index of the suffix which is $i$-th in the
- * sorted suffix array. The returned vector is of size $n+1$,
- * and $a[0] = n$. The {\tt lcp} function calculates longest
- * common prefixes for neighbouring strings in suffix array.
- * The returned vector is of size $n+1$, and $ret[0] = 0$.
+ * Description: 计算后缀数组。$a[i]$表示第$i$大的后缀的起始位置，$a[0] = n$。
+ * {\tt lcp}计算后缀数组中相邻字符串的最长公共前缀。返回数组的大小为$n+1$，$ret[0] = 0$。
  * Time: $O(N \log^2 N)$ where $N$ is the length of the string
  * for creation of the SA. $O(N)$ for longest common prefixes.
  * Memory: $O(N)$
@@ -19,7 +15,7 @@
 
 typedef pair<ll, int> pli;
 void count_sort(vector<pli> &b, int bits) { // (optional)
-	//this is just 3 times faster than stl sort for N=10^6
+	// N=10^6时，比STL的排序快3倍
 	int mask = (1 << bits) - 1;
 	rep(it,0,2) {
 		int move = it * bits;
@@ -48,7 +44,7 @@ struct SuffixArray {
 		int q = 8;
 		while ((1 << q) < N) q++;
 		for (int moc = 0;; moc++) {
-			count_sort(b, q); // sort(all(b)) can be used as well
+			count_sort(b, q); // 也可以用sort(all(b))
 			a[b[0].second] = 0;
 			rep(i,1,N)
 				a[b[i].second] = a[b[i - 1].second] +
@@ -65,7 +61,7 @@ struct SuffixArray {
 		rep(i,0,sz(a)) a[i] = b[i].second;
 	}
 	vi lcp() {
-		// longest common prefixes: res[i] = lcp(a[i], a[i-1])
+		// 计算最长公共前缀： res[i] = lcp(a[i], a[i-1])
 		int n = sz(a), h = 0;
 		vi inv(n), res(n);
 		rep(i,0,n) inv[a[i]] = i;

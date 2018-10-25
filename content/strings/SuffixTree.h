@@ -2,7 +2,9 @@
  * Author: Unknown
  * Date: 2017-05-15
  * Source: https://e-maxx.ru/algo/ukkonen
- * Description: Ukkonen's algorithm for online suffix tree construction.
+ * Description:  使用UKK(ukkonen)算法在线建立后缀树。
+ *  每个节点包括原字符串的下标 $[l, r)$ 以及子节点的列表。
+ *  Ukkonen's algorithm for online suffix tree construction.
  *  Each node contains indices [l, r) into the string, and a list of child nodes.
  *  Suffixes are given by traversals of this tree, joining [l, r) substrings.
  *  The root is 0 (has l = -1, r = 0), non-existent children are -1.

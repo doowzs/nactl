@@ -3,7 +3,7 @@
  * Date: 2015-03-15
  * License: CC0
  * Source: own work
- * Description: Various self-explanatory methods for string hashing.
+ * Description: 多种字符串哈希方式。
  * Status: tested
  */
 #pragma once

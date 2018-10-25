@@ -1,7 +1,7 @@
 /**
  * Author: Stjepan Glavina
  * Source: https://github.com/stjepang/snippets/blob/master/min_rotation.cpp
- * Description: Finds the lexicographically smallest rotation of a string.
+ * Description: 找到字符串经过旋转可以得到的字典序最小的字符串。
  * Time: O(N)
  * Status: Fuzz-tested
  * Usage:
