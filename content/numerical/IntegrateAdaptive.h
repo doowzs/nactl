@@ -3,9 +3,10 @@
  * Date: 2015-02-11
  * License: CC0
  * Source: Wikipedia
- * Description: Fast integration using an adaptive Simpson's rule.
+ * Description: 使用修改版的辛普森法则计算积分。注意为了节约空间，这里的d其实都是double。
  * Status: mostly untested
  * Usage:
+	以下函数功能不明。
 	double z, y;
 	double h(double x) { return x*x + y*y + z*z <= 1; }
 	double g(double y) { ::y = y; return quad(h, -1, 1); }

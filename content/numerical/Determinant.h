@@ -3,7 +3,7 @@
  * Date: 2016-09-06
  * License: CC0
  * Source: folklore
- * Description: Calculates determinant of a matrix. Destroys the matrix.
+ * Description: Gauss消元法的行列式计算。注意这个算法会摧毁矩阵$a$。
  * Status: somewhat tested
  * Time: $O(N^3)$
  */

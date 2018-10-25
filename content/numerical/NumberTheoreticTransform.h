@@ -3,10 +3,9 @@
  * Date: 2016-09-10
  * License: CC0
  * Source: based on KACTL's FFT
- * Description: Can be used for convolutions modulo specific nice primes
- * of the form $2^a b+1$, where the convolution result has size at most $2^a$.
- * For other primes/integers, use two different primes and combine with CRT.
- * May return negative values.
+ * Description: 用于计算卷积对具有$2^a b+1$格式的质数取模的结果, 卷积结果的规模至多是 $2^a$。
+ * 对于其他的质数或整数，使用两个质数和中国剩余定理(CRT)。
+ * 可能会返回负数。
  * Time: O(N \log N)
  * Status: Somewhat tested
  */

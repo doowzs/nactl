@@ -2,8 +2,7 @@
  * Author: Unknown
  * Date: 2014-11-27
  * Source: somewhere on github
- * Description: Calculates determinant using modular arithmetics.
- * Modulos can also be removed to get a pure-integer version.
+ * Description: 使用Gauss消元法（整数计算）求行列式并取模。将取模删了就获得普通的求行列式算法。
  * Status: bruteforce-tested for N <= 3, mod <= 7
  * Time: $O(N^3)$
  */
