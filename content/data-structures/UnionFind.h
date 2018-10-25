@@ -3,7 +3,7 @@
  * Date: 2009-10-26
  * License: CC0
  * Source: folklore
- * Description: Disjoint-set data structure.
+ * Description: 互不相交的集合构成的数据结构。使用了路径压缩。
  * Time: $O(\alpha(N))$
  */
 #pragma once

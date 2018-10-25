@@ -4,10 +4,10 @@
  * License: CC0
  * Source: Folklore
  * Status: Tested on Kattis
- * Description: Calculate submatrix sums quickly, given upper-left and lower-right corners (half-open).
+ * Description: 给出二维数组(vector<vector<T>>)的两个坐标，计算两坐标构成的矩形中所有元素的和。
  * Usage:
  * SubMatrix<int> m(matrix);
- * m.sum(0, 0, 2, 2); // top left 4 elements
+ * m.sum(0, 0, 2, 2); // 左上角的四个元素
  * Time: O(N^2 + Q)
  */
 #pragma once
