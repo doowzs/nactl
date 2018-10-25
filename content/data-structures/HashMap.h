@@ -3,8 +3,8 @@
  * Date: 2018-07-23
  * License: CC0
  * Source: http://codeforces.com/blog/entry/60737
- * Description: Hash map with the same API as unordered\_map, but \xetilde 3x faster.
- * Initial capacity must be a power of 2 (if provided).
+ * Description: 与 unordered\_map 相同的Hashing方式，但是效率大约是 3 倍。
+ * 如果提供了初始的容量，必须是2的幂级数。注意在CF等有hack的平台上最好别用。
  */
 #pragma once
 
