@@ -3,9 +3,9 @@
  * Date: 2017-05-11
  * License: CC0
  * Source: folklore
- * Description: Computes sums a[i,j] for all i<I, j<J, and increases single elements a[i,j].
- *  Requires that the elements to be updated are known in advance (call fakeUpdate() before init()).
- * Time: $O(\log^2 N)$. (Use persistent segment trees for $O(\log N)$.)
+ * Description: 计算所有$i<I, j<J$的a[i, j]的和。每次修改单个元素（输入为增量）。
+ * 每个要更新的元素都需要被处理过（在init()之前先执行fakeUpdate()）。
+ * Time: $O(\log^2 N)$. (可持久化线段树的时间复杂度是 $O(\log N)$。)
  */
 #pragma once
 
@@ -21,7 +21,8 @@ struct FT2 {
 		trav(v, ys) sort(all(v)), ft.emplace_back(sz(v));
 	}
 	int ind(int x, int y) {
-		return (int)(lower_bound(all(ys[x]), y) - ys[x].begin()); }
+		return (int)(lower_bound(all(ys[x]), y) - ys[x].begin());
+	}
 	void update(int x, int y, ll dif) {
 		for (; x < sz(ys); x |= x + 1)
 			ft[x].update(ind(x, y), dif);

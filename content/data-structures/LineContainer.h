@@ -3,8 +3,8 @@
  * Date: 2017-04-20
  * License: CC0
  * Source: own work
- * Description: Container where you can add lines of the form kx+m, and query maximum values at points x.
- *  Useful for dynamic programming.
+ * Description: 添加线性函数$kx+m$，动态查询$x$处的最大值。
+ *  动态规划很有用。（没用过）
  * Time: O(\log N)
  * Status: tested
  */

@@ -3,8 +3,7 @@
  * Date: 2009-10-30
  * License: CC0
  * Source: folklore/TopCoder
- * Description: Computes partial sums a[0] + a[1] + ... + a[pos - 1], and updates single elements a[i],
- * taking the difference between the old and new value.
+ * Description: 每次更新单点，查询区间和的数据结构。注意更新单点的参数是新旧值之差。
  * Time: Both operations are $O(\log N)$.
  */
 #pragma once

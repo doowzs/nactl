@@ -2,9 +2,7 @@
  * Author: someone on Codeforces
  * Date: 2017-03-14
  * Source: folklore
- * Description: A short self-balancing tree. It acts as a
- *  sequential container with log-time splits/joins, and
- *  is easy to augment with additional data.
+ * Description: 一个随机附加域满足堆的性质的二叉搜索树，其结构相当于以随机数据插入的二叉搜索树。支持对数级别的分裂与合并操作。
  * Time: $O(\log N)$
  */
 #pragma once
