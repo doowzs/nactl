@@ -3,7 +3,7 @@
  * Date: 2017-10-31
  * License: CC0
  * Source: folklore
- * Description: Zero-indexed max-tree. Bounds are inclusive to the left and exclusive to the right. Can be changed by modifying T, LOW and f.
+ * Description: 单点更新最大值的线段树。注意查询区间是左闭右开的，即$[b,e)$。通过修改T、LOW、f可以改变线段树的性质。
  * Time: O(\log N)
  * Status: fuzz-tested
  */
