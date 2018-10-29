@@ -144,7 +144,7 @@ def processwithcomments(caption, instream, outstream, listingslang = None):
         if commands.get("Memory"):
             out.append(r"\defmemory{%s}" % ordoescape(commands["Memory"]))
         if includelist:
-            out.append(r"\leftcaption{需要使用 %s}" % pathescape(", ".join(includelist)))
+            out.append(r"\leftcaption{需要引入 %s}" % pathescape(", ".join(includelist)))
         if nsource:
             out.append(r"\rightcaption{共计 %d 行}" % len(nsource.split("\n")))
         langstr = ", language="+listingslang if listingslang else ""

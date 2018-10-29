@@ -5,9 +5,9 @@
  * Source: http://rosettacode.org/wiki/Fast_Fourier_transform
    Papers about accuracy: http://www.daemonology.net/papers/fft.pdf, http://www.cs.berkeley.edu/~fateman/papers/fftvsothers.pdf
    For integers rounding works if $(|a| + |b|)\max(a, b) < \mathtt{\sim} 10^9$, or in theory maybe $10^6$.
- * Description: Computes $\hat f(k) = \sum_x f(x) \exp(-2\pi i k x / N)$ for all $k$. Useful for convolution:
-   \texttt{conv(a, b) = c}, where $c[x] = \sum a[i]b[x-i]$. $a$ and $b$ should be of roughly equal size.
-   For convolutions of integers, consider using a number-theoretic transform instead, to avoid rounding issues.
+ * Description: 对所有的$k$，计算$\hat f(k) = \sum_x f(x) \exp(-2\pi i k x / N)$。对于卷积
+   \texttt{conv(a, b) = c}（$c[x] = \sum a[i]b[x-i]$）很有用。$a$和$b$的尺寸应该大致相等。
+   对于整数的卷积，建议使用数论方法（下一个）来避免问题。
  * Time: O(N \log N)
  * Status: somewhat tested
  */

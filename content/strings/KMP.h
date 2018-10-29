@@ -1,8 +1,8 @@
 /**
  * Author: Johan Sannemo
  * License: CC0
- * Description: pi[x] computes the length of the longest prefix of s that ends at x, other than s[0..x] itself
- * This is used by find to find all occurances of a string.
+ * Description: pi[x]在x处结束的s的最长前缀。
+ * KMP算法用于寻找一个字符串在另一个中所有的出现位置。
  * Time: O(pattern) for pi, O(word + pattern) for find
  * Status: Tested on Kattis, stringmatching
  * Usage:

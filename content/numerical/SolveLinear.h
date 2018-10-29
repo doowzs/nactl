@@ -2,8 +2,8 @@
  * Author: Per Austrin, Simon Lindholm
  * Date: 2004-02-08
  * License: CC0
- * Description: Solves $A * x = b$. If there are multiple solutions, an arbitrary one is returned.
- *  Returns rank, or -1 if no solutions. Data in $A$ and $b$ is lost.
+ * Description: 求解线性方程$Ax = b$。如果方程有多解，随机返回一组解。
+ *  函数的返回值为解的阶数或-1（无解）。 函数会摧毁矩阵$A$和$b$。
  * Time: O(n^2 m)
  * Status: tested on kattis:equationsolver, and bruteforce-tested mod 3 and 5 for n,m <= 3
  */
@@ -45,5 +45,5 @@ int solveLinear(vector<vd>& A, vd& b, vd& x) {
 		x[col[i]] = b[i];
 		rep(j,0,i) b[j] -= A[j][i] * b[i];
 	}
-	return rank; // (multiple solutions if rank < m)
+	return rank; // 如果rank < m，方程有多解
 }

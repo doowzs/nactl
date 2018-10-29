@@ -3,7 +3,12 @@
  * Date: 2015-02-18
  * License: CC0
  * Source: marian's (TC) code
- * Description: Aho-Corasick tree is used for multiple pattern matching.
+ * Description: AC自动机用于多模式匹配。
+ * 用create(patterns)来初始化AC树，find(word)函数返回以每个位置为结尾的最长的模式的序号（如果没有，则值为-1）。
+ * findAll(\_, word)找到以每个位置为起点的所有模式（如果没有重复，最多$N \sqrt N$个）的序号（最短的最优先）。
+ * 可以有重复的模式，但是不能有空的模式。
+ * 要找到以每个位置为起始点的最长的单词，翻转所有输入的顺序。
+ * Aho-Corasick tree is used for multiple pattern matching.
  * Initialize the tree with create(patterns). find(word) returns for each position
  * the index of the longest word that ends there, or -1 if none. findAll(\_, word) finds all words
  * (up to $N \sqrt N$ many if no duplicate patterns) that start at each position (shortest first).

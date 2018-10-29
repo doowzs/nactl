@@ -3,8 +3,8 @@
  * Date: 2016-08-27
  * License: CC0
  * Source: own work
- * Description: Solves $Ax = b$ over $\mathbb F_2$. If there are multiple solutions, one is returned arbitrarily.
- *  Returns rank, or -1 if no solutions. Destroys $A$ and $b$.
+ * Description: 在二维空间$\mathbb F_2$中求解线性方程组$Ax = b$。如果方程组有多解，返回任意一组解。
+ *  返回解的阶数或-1（无解）。函数会摧毁矩阵$A$和$b$。
  * Time: O(n^2 m)
  * Status: bruteforce-tested for n, m <= 4
  */
@@ -42,5 +42,5 @@ int solveLinear(vector<bs>& A, vi& b, bs& x, int m) {
 		x[col[i]] = 1;
 		rep(j,0,i) b[j] ^= A[j][i];
 	}
-	return rank; // (multiple solutions if rank < m)
+	return rank; // 如果rank < m，方程有多解
 }

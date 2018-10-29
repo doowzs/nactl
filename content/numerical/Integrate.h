@@ -3,10 +3,8 @@
  * Date: 2015-02-11
  * License: CC0
  * Source: Wikipedia
- * Description: Simple integration of a function over an interval using
- *  Simpson's rule. The error should be proportional to $h^4$, although in
- *  practice you will want to verify that the result is stable to desired
- *  precision when epsilon changes.
+ * Description: 利用辛普森法则计算指定区间上的函数积分。
+ * 误差与$h^4$成正比，在实际使用中最好验证答案与需要的精度相吻合。
  * Status: mostly untested
  */
 #pragma once

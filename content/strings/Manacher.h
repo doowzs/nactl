@@ -1,8 +1,7 @@
 /**
  * Author: User adamant on CodeForces
  * Source: http://codeforces.com/blog/entry/12143
- * Description: For each position in a string, computes p[0][i] = half length of
- *  longest even palindrome around pos i, p[1][i] = longest odd (half rounded down).
+ * Description: 本函数计算p数组，其中p[0][i]表示以i(+1/2)为中心的偶数长的回文串的半长；p[1][i]表示以i为中心的奇数长的回文串的半长（向下取整）。
  * Time: O(N)
  * Status: Fuzz-tested
  */
@@ -18,4 +17,5 @@ void manacher(const string& s) {
 		while (L>=1 && R+1<n && s[L-1] == s[R+1])
 			p[z][i]++, L--, R++;
 		if (R>r) l=L, r=R;
-}}
+	}
+}
