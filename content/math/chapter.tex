@@ -18,10 +18,10 @@
 \[x_i = \frac{\det A_i'}{\det A} \]
 其中 $A_i'$ 是将 $A$ 的第 $i$ 列用 $b$ 替换得到的矩阵。
 
-\section{Recurrences}
-If $a_n = c_1 a_{n-1} + \dots + c_k a_{n-k}$, and $r_1, \dots, r_k$ are distinct roots of $x^k + c_1 x^{k-1} + \dots + c_k$, there are $d_1, \dots, d_k$ s.t.
+\section{解递归式}
+如果 $a_n = c_1 a_{n-1} + \dots + c_k a_{n-k}$, 且 $r_1, \dots, r_k$ 是多项式 $x^k + c_1 x^{k-1} + \dots + c_k$ 不同的零点, 那么存在常数 $d_1, \dots, d_k$ 使得.
 \[a_n = d_1r_1^n + \dots + d_kr_k^n. \]
-Non-distinct roots $r$ become polynomial factors, e.g. $a_n = (d_1n + d_2)r^n$.
+相同的根 $r$ 将成为多项式的系数，例如 $a_n = (d_1n + d_2)r^n$.
 
 \section{三角函数}
 基础公式：
